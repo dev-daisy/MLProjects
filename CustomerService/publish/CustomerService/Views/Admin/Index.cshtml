@@ -1,0 +1,61 @@
+﻿@model CustomerService.Models.CustomerServiceModel
+@{
+    //ViewBag.Title = "Admin";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    int curMonth = DateTime.Today.Month;
+    int[] months = Enumerable.Range(1, 12).ToArray();
+    int maxyr = DateTime.Now.Year - 2013;
+    int[] years = Enumerable.Range(2013, maxyr + 1).ToArray();
+}
+
+<center>
+    <div  id="category">
+        <table style="border: 1px solid white; background-color: white; padding:2%; border-radius:4px;">
+            <tr>
+                <th style="width: 150px; text-align: left;  padding: 2%; ">
+                    Category
+                </th>
+                <th style="width: 2px; ">:</th>
+                <td>  @Html.DropDownListFor(m => m.Category, Model.Category, new { @id = "ttype", @class = "dropdown" }) </td>
+            </tr>
+            <tr>
+                <th style="width: 150px; text-align: left;  padding: 2%; ">
+                    Month
+                </th>
+                <th style="width: 2px; ">:</th>
+                <td>
+                    @Html.DropDownListFor(x => x.Month, months.Select(x => new SelectListItem { Text = @System.Globalization.CultureInfo.CurrentCulture.DateTimeFormat.GetMonthName(x), Value = x.ToString(), Selected = (x == curMonth) }), new { @class = "dropdown", @id = "month" })
+                </td>
+            </tr>
+            <tr>
+                <th style="width: 150px; text-align: left;  padding: 2%; ">
+                    Year
+                </th>
+                <th style="width: 2px; ">:</th>
+                <td>
+                    @Html.DropDownListFor(x => x.Year, years.Select(x => new SelectListItem { Text = x.ToString(), Value = x.ToString(), Selected = (x == Model.Year) }), new { @class = "dropdown", @id = "year" })
+                </td>
+            </tr>
+        </table>
+        <br />
+        <button type="submit" id="cth" style="padding:10px;">Customer Transaction History</button>
+        <button type="submit" id="cts" style="padding: 10px;">Customer Transaction Summary</button>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <label style="font-weight:bold; color:red;" id="msg"></label>
+            <div id="customerinfo">
+            </div>
+            @*<div style="width:100%; height:100%; overflow:auto;">
+                <div id="customersummary"></div>
+                <div style="text-align: left; width: 100%" id="chartContainer"></div>
+            </div>*@
+        </div>
+    </div>
+</center>
+
+@Html.Partial("_LoaderPartial")
+@Html.Partial("_modal")
+@Html.Partial("_txnSummary")
+@Html.Partial("_CustInfo")
+@Html.Partial("_graph")

@@ -1,0 +1,14 @@
+Using Connection string
+
+"DSN=Sample Hortonworks Hive DSN;User Name=root;HiveServerType=2;Host=192.168.19.242;Port=10000;UID=admin"
+
+This how to create partitioned and clustered stored as ORC file table
+
+create table customerservicedb.tblcusttxn2017(id int, emailadd string, birthdate string, mobileno string, address string, gender string, refno string, kptn string, transdate string, claimeddate string, amount decimal(14,2), charge decimal(14,2), commission decimal(14,2), zone string, senderbranch string, receiverbranch string, receivername string, partnername string, datemodified timestamp, sendername string, custid string, lname string, fname string, mname string, username string, walletno string, txntype string) PARTITIONED BY (dateinserted timestamp) CLUSTERED BY(id) INTO 3 BUCKETS STORED AS ORC TBLPROPERTIES ('transactional'='true');
+
+
+
+
+This how to insert data in a partitioned and clustered stored as ORC file table
+
+insert into table tblcusttxn2017 partition (dateinserted= '2018-03-28 15:38:56') values(1,'JPAIRA05@GMAIL.COM','1990-11-03','09173284424','NULL','FEMALE','-','MLW001111613080360317','2017-03-11 14:02:37.0','0000-00-00 00-00-00.0',1000,30,0,'VISMIN','CEBU HEAD OFFICE', '-','JANDOG','-','PAIRA','0000-00-00 00-00-00.0','1290124','PAIRA','JUVY ANN','JANDOG','JUVY03','17010000006091','WALLETSO')

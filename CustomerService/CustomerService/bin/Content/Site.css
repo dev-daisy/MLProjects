@@ -1,0 +1,411 @@
+﻿body {
+    background-color:#eeeeee;
+    /*background-image:url('../Content/images/bg.jpg');*/ 
+    /*color:white;*/
+    font-family:Arial;
+}
+
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    -webkit-margin-before: 1em;
+    -webkit-margin-after: 1em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 40px;
+}
+
+header, footer, nav, section {
+    display: block;
+}
+
+
+/*copy*/
+.header-new {
+    position: fixed;
+    width: 100%;
+    background: #fff;
+    z-index: 9;
+    height: 40px;
+    box-shadow: 0 0 3px rgba(0,0,0,.11), 0 3px 6px rgba(0,0,0,.22);
+    border-bottom: 1px solid #E3E7E9;
+}
+.topheader {
+    position: relative;
+    float: left;
+    width: 100%;
+}
+.wrapperin {
+    width: 94%;
+    margin: 0 3%;
+}
+.wrapperin {
+    margin: 0 auto;
+    position: relative;
+}
+.header {
+    background-position: 0px 0px;
+    position: relative;
+    float: left;
+    width: 164px;
+    height: 25px;
+    padding: 8px 0 0 0;
+}
+footer #foot_copy {
+    border-top: 1px solid #E3E7E9;
+    box-shadow: 0 0 0, -12px -2px 6px rgba(0,0,0,.22);
+    background: #fff;
+    clear: both;
+    color: black;
+    font-size: 12px;
+    line-height: 6px;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+
+
+/* Styles for basic forms
+-----------------------------------------------------------*/
+fieldset {
+    border: 1px solid #ddd;
+    padding: 0 1.4em 1.4em 1.4em;
+    margin: 0 0 1.5em 0;
+}
+
+legend {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+textarea {
+    min-height: 75px;
+}
+
+.editor-label {
+    margin: 1em 0 0 0;
+}
+
+.editor-field {
+    margin: 0.5em 0 0 0;
+}
+
+
+/* Styles for validation helpers
+-----------------------------------------------------------*/
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.label {
+    position: relative;
+    padding-left: 21px;
+    font-size: 12px;
+    font-weight:bold;
+}
+
+.button {
+    cursor: pointer;
+    transition: 0.3s;
+    width:15px;
+    border-radius: 19px 19px;
+    float: right; 
+    cursor:pointer;
+    position: relative;
+    float: right;
+    padding: 9px 0 0 0;
+}
+
+.button:hover {opacity: 0.7;}
+
+
+.container {
+    position: relative;
+    padding-left: 25px;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight:bold;
+
+}
+/* Hide the browser's default radio button */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+/* Create a custom radio button */
+.checkmark {
+    position: absolute;
+    top: 2px;
+    left: 8px;
+    height: 12px;
+    width: 12px;
+    background-color: #c3c1c1;
+    border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: #62beea;
+}
+
+/* When the radio button is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.container .checkmark:after {
+ 	top: 9px;
+	left: 9px;
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	background: white;
+}
+.example input[type=text] {
+    padding: 6px;
+    font-size: 12px;
+    border: 1px solid grey;
+    float: left;
+    width: 78%;
+    background: #f1f1f1;
+}
+
+
+.example button {
+    float: right;
+    width: 18%;
+    padding: 6px;
+    background: #2196F3;
+    color: white;
+    border: 1px solid grey;
+    border-left: none;
+    cursor: pointer;
+}
+
+.example button:hover {
+    background: #0b7dda;
+}
+
+.example::after {
+    content: "";
+    clear: both;
+    /*display: table;*/
+}
+
+
+.modal-content {
+        
+    /*margin: 8.5% auto;*/ /* 15% from the top and centered */
+    padding: 12px;
+    /*border: 5px solid black;*/
+    height: 82%; /* Full height */
+    width: auto; /* Could be more or less, depending on screen size */
+    overflow:auto;
+}
+
+.modal {
+    /*display: block !important;*/
+    position:   fixed;
+    /*top:        119px;*/
+    height:     100%;
+    width:      95%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color:#fff;
+    left:2.5%;
+    /*overflow:auto;*/
+    /*background:rgba(115, 110, 110, 0.38);*/
+               
+}
+
+
+.modalloader {
+    /*display: block !important;*/
+    /*position:   fixed;*/
+    /*top:        119px;*/
+    height:     100%;
+    width:      100%;
+    display: block;
+    /*border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color:#fff;*/
+    /*left:2.5%;*/
+    /*overflow:auto;*/
+    /*background:rgba(115, 110, 110, 0.38);*/
+}
+.modalcustinfo {
+    /*display: block !important;*/
+    position:   fixed;
+    /*top:        119px;*/
+    height:     83%;
+    width:      90%;
+    border: 1px solid  darkgray;
+    background-color:#f3f9eb;
+    left:5%;
+    top:12%;
+    border-radius:12px;
+    overflow:auto;
+    /*background:rgba(115, 110, 110, 0.38);*/
+               
+}
+.modaltxnsummary {
+    /*display: block !important;*/
+    position:   fixed;
+    /*top:        119px;*/
+    height:     77%;
+    width:      90%;
+    border: 1px solid  darkgray;
+    background-color:#f3f9eb;
+    left:5%;
+    top:18%;
+    border-radius:12px;
+    overflow:auto;
+    /*background:rgba(115, 110, 110, 0.38);*/
+               
+}
+.modaladmin {
+    /*display: block !important;*/
+    position:   fixed;
+    top:        195px;
+    height:     20%;
+    width:      30%;
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #ccc;
+    background-color:cornsilk;
+    left:34%;
+    opacity:.8;
+    color:black;
+	border-radius: 20%;
+    /*overflow:auto;*/
+    /*background:rgba(115, 110, 110, 0.38);*/
+               
+}
+
+.imgLoad {
+position:absolute;
+top:16%;
+left:47.5%;
+}
+body.loading {
+    overflow: hidden;   
+}
+body.loading .modal {
+    display: block;
+}
+
+
+#customers {
+    font-family:Arial;
+    /*font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;*/
+    font-size:12px;
+    border-collapse: collapse;
+    width: 90%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #b0b5bf;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    background-color: #fff;
+    color: #1f1f1f ;
+    font-weight:bold;
+}
+    #customers td {
+    text-align: center;
+    }
+
+.buttonstyle {
+    /*top: 81%;*/
+    position: relative;
+    /*left: 45%;*/
+    /*overflow: visible;*/
+    display: inline-block;
+    padding: 0.5em 1em;
+    border: 1px solid #d4d4d4;
+    font-weight: bold;
+    font-family:Arial;
+    /*font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;*/ 
+    font-size: 12px; 
+    margin: 0;
+    text-align: center;
+    text-shadow: 1px 1px 0 #fff;
+    color: #333;
+    white-space: nowrap;
+    cursor: pointer;
+    outline: none;
+    background-color: #ececec;
+    background-clip: padding-box;
+    border-radius: 0.2em;
+    zoom: 1;
+
+}
+.buttonstyle:hover {background-color: #6297da;
+    text-shadow: none;
+    color:white;
+
+}
+
+
+
+.dropdown {
+ height:32px;
+ width:290px;
+ background-color:#fff;
+
+ color:black;
+ -moz-border-radius:5px; -webkit-border-radius:5px; margin:5px auto;
+ border:solid 1px;
+ border-bottom-color:black;
+}

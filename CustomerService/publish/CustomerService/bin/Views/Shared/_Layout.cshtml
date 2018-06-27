@@ -1,0 +1,84 @@
+﻿@model CustomerService.Models.CustomerServiceModel
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/Content/images/favicon.ico" rel="shortcut icon">
+    <title>Customer Service</title>
+    <script src="~/Scripts/jquery-3.1.0.min.js"></script>
+    <script src="~/Scripts/jquery-ui.min.js"></script>
+    <script src="~/Scripts/canvasjs.min.js"></script>
+    @*<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>*@
+    <script src="~/Scripts/_references.js"></script>
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+    <script src="~/Scripts/jquery.validate.js"></script>
+    <script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+
+    <link href="~/Content/jquery-ui.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/fonts/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <center>
+        <header>
+            <div class="header-new">
+                <div class="topheader">
+                    <div class="wrapperin">
+                        <div class="main-head" style="margin-left:0px;margin-right:0px;">
+                            <div><img class="header" style="float: left;" src=@Url.Content("~/Content/images/banner.png") /></div>
+                            <a href="@Url.Action("Index", "Logout")" class="button"><img alt="logout" style="width: 24px; border-radius: 19px 19px; " src=@Url.Content("~/Content/images/logout.png") /></a>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-weight: bold; position: relative; font-size: 14px; top: -24px;">CUSTOMER SERVICE v1.0</p>
+            </div>
+        </header>
+        <div style="height: 37px;"></div>
+        <div style="background-color: #f9f9f9; height: 27px; border-bottom: 1px solid #ccc;  padding: 12px; ">
+            @*<div style="float: left; padding: 10px;">
+                <label class="label"> TRANSACTION :  </label>
+                <label class="container">
+                    History
+                    <input id="radiohistory" type="radio" checked="checked" name="radio" value="history">
+                    <span class="checkmark"></span>
+                </label>
+                <label class="container">
+                    Summary
+                    <input id="radiosummary" type="radio" name="radio" value="summary">
+                    <span class="checkmark"></span>
+                </label>
+            </div>*@                
+            
+             @{ if (Model.user == "admin")
+             {
+                 <div style="float: left; padding: 10px;">
+                    @*<p id="user" class="label">Welcome Admin!</p>*@
+                    <label class="container" style="top:8.5%; left:57%; position:absolute">
+                        INSERT TRANSACTIONS
+                        <input id="insert" type="radio" name="radio" value="inserttxn">
+                        <span class="checkmark"></span>
+                    </label>
+                </div>
+             }
+            }
+            <div id="divsearch" style="float:right; width:350px" >
+                <div class="example">
+                    <input style="width:37%" type="text" placeholder="First Name" name="custfname" id="custfname">
+                    <input style="width:37%" type="text" placeholder="Last Name" name="custlname" id="custlname">
+                    <button type="submit" id="search"><i class="fa fa-search"></i></button>
+                </div>
+            </div>
+        </div>
+        @RenderBody()
+
+        <footer>
+            <div id="foot_copy">
+                Copyright &copy; @DateTime.Now.Year - M.Lhuillier, Inc. Philippines. All Rights Reserved.
+            </div>
+        </footer>
+    </center>
+   @*@Scripts.Render("~/bundles/jquery")*@
+    @RenderSection("scripts", required: false)
+</body>
+</html>

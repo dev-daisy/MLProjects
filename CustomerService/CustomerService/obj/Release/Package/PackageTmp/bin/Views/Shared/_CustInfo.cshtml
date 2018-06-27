@@ -1,0 +1,20 @@
+﻿<center>
+    <div id="custinformation" class="modalcustinfo" style="overflow:auto">
+        <a id="closepop" href="#" onclick="return hide('custinformation')" style="float:right;"><img src='~/Content/images/close1.jpeg' style="border-radius: 12px;" width="20" height="20" /></a>
+        <br />
+        <div id="percustomerinfo"></div>
+        <label style="visibility:hidden;" id="custid"></label>
+        <label style="visibility:hidden;" id="fname"></label>
+        <label style="visibility:hidden;" id="mname"></label>
+        <label style="visibility:hidden;" id="lname"></label>
+        <label style="visibility:hidden;" id="uname"></label>
+        <label style="visibility:hidden;" id="walletno"></label>
+        <button type="submit" id="custinforeport" class="buttonstyle" value="report">Generate KYC</button>
+        <a style="visibility:hidden;" id="exportcustinfo" href=@Url.Action("ExportKYC", "CustomerService")> <span><label>Export</label></span> </a>
+
+    </div>
+    <br />
+    <br />
+    <br />
+    <label style="font-weight:bold;" id="msg2"></label>
+</center>

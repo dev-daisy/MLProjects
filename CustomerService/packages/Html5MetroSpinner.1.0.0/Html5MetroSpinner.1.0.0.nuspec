@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Html5MetroSpinner</id>
+    <version>1.0.0</version>
+    <title>HTML5 / CSS3 Metro Style Spinner</title>
+    <authors>Microsoft</authors>
+    <owners>Microsoft</owners>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Windows 8 Metro Style Spinner animation by pure HTML5/CSS3, no image is required. JS and CSS are extracted and unminified from Microsoft official site.</description>
+    <summary />
+    <releaseNotes>Useage:
+
+var barLoader = metroSpinner.createLoading(0, metroSpinner.loadingType.flying, "100%", "10px", "5px", "#F00");
+$(".bar").append(barLoader);
+ metroSpinner.showLoading(barLoader);
+
+ var circleLoader = metroSpinner.createLoading(0, metroSpinner.loadingType.spinning, "36px", "36px", "4px", "#0072BC");
+ $(".circle").append(circleLoader);
+metroSpinner.showLoading(circleLoader);</releaseNotes>
+    <copyright>(c) Microsoft</copyright>
+    <tags>HTML5 CSS3 Metro Spinner</tags>
+    <dependencies>
+      <dependency id="jquery" version="1.8.2" />
+    </dependencies>
+  </metadata>
+</package>

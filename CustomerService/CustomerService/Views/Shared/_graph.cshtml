@@ -1,0 +1,12 @@
+﻿<center>
+    <div id="graph" class="modaltxnsummary">
+        <a id="closepop" href="#" onclick="return hide('graph')" style="float:right;"><img src='~/Content/images/close1.jpeg' style="border-radius: 12px;" width="20" height="20" /></a>
+        <br />
+        <br />
+        <br />
+        <div id="customersummary"></div>
+        <div style="text-align: left; width: 100%" id="chartContainer"></div>
+        <button type="submit" id="summaryreport" class="buttonstyle" value="report">Generate Report</button>
+        <a style="visibility:hidden;" id="exportsummary" href=@Url.Action("ExportSummary", "CustomerService")> <span><label>Export</label></span> </a>
+ </div>
+</center>

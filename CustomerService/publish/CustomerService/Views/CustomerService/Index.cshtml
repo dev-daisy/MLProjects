@@ -1,0 +1,25 @@
+﻿@model CustomerService.Models.CustomerServiceModel
+
+<center>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <label style="font-weight:bold; color:red;" id="msg"></label>
+            <div id="customerinfo"></div>
+            @*<div style="width:100%; height:100%; overflow:auto;">
+                <div id="customersummary"></div>
+                <div style="text-align: left; width: 100%" id="chartContainer"></div>
+            </div>*@
+            <br />
+        </div>
+    </div>
+    <div style="padding-top:2%" id="category"></div>
+</center>
+@Html.Partial("_LoaderPartial")
+@Html.Partial("_modal")
+@Html.Partial("_txnSummary")
+@Html.Partial("_CustInfo")
+@Html.Partial("_graph")
+
+
+
+

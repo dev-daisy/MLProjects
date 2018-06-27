@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Access Denied";
+}
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Access Denied</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <center>
+        <header>
+            <div class="header-new">
+                <div class="topheader">
+                    <div class="wrapperin">
+                        <div class="main-head" style="margin-left:0px;margin-right:0px;">
+                            <div><img class="header" style="float: left;" src=@Url.Content("~/Content/images/banner.png") /></div>
+                        </div>
+                    </div>
+                </div>
+                <p style="font-weight: bold; position: relative; font-size: 14px; top: -24px;">CUSTOMER SERVICE v1.0</p>
+            </div>
+        </header>
+        <div style="height:168px;"></div>
+        <h1><b style="color:red;">Access Denied</b></h1>
+        <footer>
+            <div id="foot_copy">
+                Copyright &copy; @DateTime.Now.Year - M.Lhuillier, Inc. Philippines. All Rights Reserved.
+            </div>
+        </footer>
+    </center>
+</body>
+
+
+
+
+
+
+
+
+</html>
+
+
+
+

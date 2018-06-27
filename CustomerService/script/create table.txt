@@ -1,0 +1,81 @@
+create TABLE IF NOT EXISTS  customerservicedb.TRADEIN2019(id int, emailadd string, birthdate string, mobileno string,  address string, gender string, refno string, kptn string, transdate string, claimeddate string, amount decimal(14,2),  charge decimal(14,2), commission decimal(14,2), zone string, senderbranch string, receiverbranch string, receivername string,   partnername string, datemodified timestamp, sendername string, custid string, lname string, fname string,  mname string, username string, walletno string, txntype string,oldkptn string,ptn string,oldptn string,accountcode string,  cancelreason string,cancelleddate string,controlno string,irno string,orno string,operatorid string,   isremote string,remotebranch string,remoteoperatorid string,othercharge decimal(14,2),branchcode string,cancelledbyoperatorid string,  cancelledbybranchcode string,cancelledbyzonecode string,canceldetails string, cancelcharge string,chargeto string,remotezonecode string, currency string,stationid string,maturitydate string,expirydate string,advanceinterest decimal(14,2),itemdesc string,quantity int,  weight string,karat string,carat string,appraiser string,operatorname string,discount decimal(14,2),itemcode string,   accountname string,payor string,otherdetails string,mcno string,custname string,foreigncurrency string,exchangerate string,  foreignamount decimal(14,2),purpose string,sourceoffund string,servicetype string,cancelledoperator string,remoteoperator string,cancelledbranch string,branch string) PARTITIONED BY (dateinserted timestamp) CLUSTERED BY(id) INTO 3 BUCKETS STORED AS ORC TBLPROPERTIES ('transactional'='true')
+
+
+
+create TABLE IF NOT EXISTS  customerservicedb.TRADEIN2013COUNT( id int, emailadd string, birthdate string, mobileno string,  address string, gender string, totalamount decimal(14,2),   totalcharge decimal(14,2), totalcommission decimal(14,2),  datemodified timestamp,  custid string, lname string, fname string,  mname string, username string, walletno string, txntype string,totalcount int,  street string,provincecity string,country string,  zipcode string,branchid string,idtype string, idno string,expirydate string,dtcreated string,dtmodified string,createdby string,modifiedby string,  phoneno string, cardno string,placeofbirth string,natureofwork string,permanentaddress string,nationality string, companyoremployer string,businessorprofession string,govtidtype string,govtidno string,  branchcreated string,branchmodified string,mlcardno string,servicetype string )  PARTITIONED BY (dateinserted timestamp) CLUSTERED BY(id) INTO 3 BUCKETS STORED AS ORC TBLPROPERTIES ('transactional'='true')
+
+
+ //domestic
+            reportlist.Add(new SelectListItem { Text = "KP Sendout", Value = "kpso" });
+            reportlist.Add(new SelectListItem { Text = "KP Payout", Value = "kppo" });
+            reportlist.Add(new SelectListItem { Text = "KP RFC", Value = "kprfc" });
+            reportlist.Add(new SelectListItem { Text = "KP RTS", Value = "kprts" });
+            reportlist.Add(new SelectListItem { Text = "KP CSO", Value = "kpcso" });
+            reportlist.Add(new SelectListItem { Text = "KP CPO", Value = "kpcpo" });
+            //wallet
+            reportlist.Add(new SelectListItem { Text = "Wallet Sendout", Value = "walletso" });
+            reportlist.Add(new SelectListItem { Text = "Wallet Payout", Value = "walletpo" });
+            reportlist.Add(new SelectListItem { Text = "Wallet RFC", Value = "walletrfc" });
+            reportlist.Add(new SelectListItem { Text = "Wallet RTS", Value = "walletrts" });
+            reportlist.Add(new SelectListItem { Text = "Wallet CSO", Value = "walletcso" });
+            reportlist.Add(new SelectListItem { Text = "Wallet CPO", Value = "walletcpo" });
+            reportlist.Add(new SelectListItem { Text = "Wallet Billspay", Value = "walletbp" });
+            reportlist.Add(new SelectListItem { Text = "Wallet Eload", Value = "walleteload" });
+            reportlist.Add(new SelectListItem { Text = "Wallet Corp PO", Value = "walletcorppo" });
+            //express
+            reportlist.Add(new SelectListItem { Text = "Express Sendout", Value = "expressso" });
+            reportlist.Add(new SelectListItem { Text = "Express Payout", Value = "expresspo" });
+            reportlist.Add(new SelectListItem { Text = "Express RFC", Value = "expressrfc" });
+            reportlist.Add(new SelectListItem { Text = "Express RTS", Value = "expressrts" });
+            reportlist.Add(new SelectListItem { Text = "Express CSO", Value = "expresscso" });
+            reportlist.Add(new SelectListItem { Text = "Express CPO", Value = "expresscpo" });
+            reportlist.Add(new SelectListItem { Text = "Express Billspay", Value = "expressbp" });
+            reportlist.Add(new SelectListItem { Text = "Express Eload", Value = "expresseload" });
+            reportlist.Add(new SelectListItem { Text = "Express Corp PO", Value = "expresscorppo" });
+            //corporate api
+            reportlist.Add(new SelectListItem { Text = "API Sendout", Value = "apiso" });
+            reportlist.Add(new SelectListItem { Text = "API Payout", Value = "apipo" });
+            reportlist.Add(new SelectListItem { Text = "API RFC", Value = "apirfc" });
+            reportlist.Add(new SelectListItem { Text = "API RTS", Value = "apirts" });
+            reportlist.Add(new SelectListItem { Text = "API CSO", Value = "apicso" });
+            reportlist.Add(new SelectListItem { Text = "API CPO", Value = "apicpo" });
+            //corporate fu
+            reportlist.Add(new SelectListItem { Text = "FU Sendout", Value = "fuso" });
+            reportlist.Add(new SelectListItem { Text = "FU Payout", Value = "fupo" });
+            reportlist.Add(new SelectListItem { Text = "FU RFC", Value = "furfc" });
+            reportlist.Add(new SelectListItem { Text = "FU RTS", Value = "furts" });
+            reportlist.Add(new SelectListItem { Text = "FU CSO", Value = "fucso" });
+            reportlist.Add(new SelectListItem { Text = "FU CPO", Value = "fucpo" });
+            //corporate fu
+            reportlist.Add(new SelectListItem { Text = "WSC Sendout", Value = "wscso" });
+            reportlist.Add(new SelectListItem { Text = "WSC Payout", Value = "wscpo" });
+            reportlist.Add(new SelectListItem { Text = "WSC RFC", Value = "wscrfc" });
+            reportlist.Add(new SelectListItem { Text = "WSC RTS", Value = "wscrts" });
+            reportlist.Add(new SelectListItem { Text = "WSC CSO", Value = "wsccso" });
+            reportlist.Add(new SelectListItem { Text = "WSC CPO", Value = "wsccpo" });
+            //billspay
+            reportlist.Add(new SelectListItem { Text = "BP Sendout", Value = "bpso" });
+            reportlist.Add(new SelectListItem { Text = "BP RFC", Value = "bprfc" });
+            reportlist.Add(new SelectListItem { Text = "BP RTS", Value = "bprts" });
+            reportlist.Add(new SelectListItem { Text = "BP CSO", Value = "bpcso" });
+            //qcl
+            reportlist.Add(new SelectListItem { Text = "Prenda", Value = "prenda" });
+            reportlist.Add(new SelectListItem { Text = "Lukat", Value = "lukat" });
+            reportlist.Add(new SelectListItem { Text = "Renew", Value = "renew" });
+            reportlist.Add(new SelectListItem { Text = "Reappraise", Value = "reappraise" });
+            //global
+            reportlist.Add(new SelectListItem { Text = "Global Sendout", Value = "globalso" });
+            reportlist.Add(new SelectListItem { Text = "Global Payout", Value = "globalpo" });
+            reportlist.Add(new SelectListItem { Text = "Global RFC", Value = "globalrfc" });
+            reportlist.Add(new SelectListItem { Text = "Global RTS", Value = "globalrts" });
+            reportlist.Add(new SelectListItem { Text = "Global CSO", Value = "globalcso" });
+            reportlist.Add(new SelectListItem { Text = "Global CPO", Value = "globalcpo" });
+            //jewellers
+            reportlist.Add(new SelectListItem { Text = "Lay Away", Value = "layaway" });
+            reportlist.Add(new SelectListItem { Text = "Sales", Value = "sales" });
+            reportlist.Add(new SelectListItem { Text = "Trade-In", Value = "tradein" });
+            //SBL
+            reportlist.Add(new SelectListItem { Text = "SBL", Value = "sbl" });
+            reportlist.Add(new SelectListItem { Text = "Eload", Value = "eload" });
+            reportlist.Add(new SelectListItem { Text = "Insurance", Value = "insurance" });
+            reportlist.Add(new SelectListItem { Text = "Goods", Value = "goods" });
