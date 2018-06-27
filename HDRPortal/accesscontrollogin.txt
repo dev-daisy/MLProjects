@@ -1,0 +1,36 @@
+DELIMITER $$
+
+USE `kpusers`$$
+
+DROP PROCEDURE IF EXISTS `accesscontrollogin`$$
+
+CREATE DEFINER=`root`@`localhost` PROCEDURE `accesscontrollogin`(IN _username VARCHAR(50))
+BEGIN
+SELECT resourceid,userlogin,userpassword,roleid,fullname,zonecode,regioncode,regionname,areacode,areaname,branchcode,branchname
+FROM(SELECT 
+a.resourceid,a.userlogin,a.userpassword,a.roleid,
+TRIM(UPPER(IF(b.fullname IS NULL OR b.fullname = '',CONCAT(b.firstname,' ',b.middlename,' ',b.lastname),b.fullname))) AS fullname,
+a.zonecode,
+IF(c.regionname='HO' AND (c.regioncode IS NULL OR c.regioncode =''),50,c.regioncode) AS regioncode,TRIM(UPPER(c.regionname)) AS regionname,
+IF(c.regionname='HO' AND (c.areacode IS NULL OR c.areacode =''),'A',c.areacode) AS areacode,TRIM(UPPER(c.areaname)) AS areaname,
+a.branchcode,TRIM(UPPER(c.branchname)) AS branchname
+FROM kpusers.adminsysuseraccounts a
+INNER JOIN kpusers.adminbranchusers b ON b.resourceid=a.resourceid
+INNER JOIN kpusers.branches c ON c.branchcode=a.branchcode AND c.zonecode=a.zonecode AND c.status=1
+WHERE a.roleid IN ('KP-MIS HELPDESK','KP-MISHELPDESK','KP-MISHELPDESKMIN','GM','KP-GMO') AND a.isactive=1 AND a.userlogin=_username
+UNION ALL
+SELECT 
+a.resourceid,a.userlogin,a.userpassword,a.roleid,
+TRIM(UPPER(IF(b.fullname IS NULL OR b.fullname = '',CONCAT(b.firstname,' ',b.middlename,' ',b.lastname),b.fullname))) AS fullname,
+a.zonecode,
+IF(c.regionname='HO' AND (c.regioncode IS NULL OR c.regioncode =''),50,c.regioncode) AS regioncode,TRIM(UPPER(c.regionname)) AS regionname,
+IF(c.regionname='HO' AND (c.areacode IS NULL OR c.areacode =''),'A',c.areacode) AS areacode,TRIM(UPPER(c.areaname)) AS areaname,
+a.branchcode,TRIM(UPPER(c.branchname)) AS branchname
+FROM kpusers.sysuseraccounts a
+INNER JOIN kpusers.branchusers b ON b.resourceid=a.resourceid
+INNER JOIN kpusers.branches c ON c.branchcode=a.branchcode AND c.zonecode=a.zonecode AND c.status=1
+WHERE a.roleid IN ('KP-MIS HELPDESK','KP-MISHELPDESK','KP-MISHELPDESKMIN','GM','KP-GMO') AND a.isactive=1 AND a.userlogin=_username
+)X GROUP BY resourceid; 
+END$$
+
+DELIMITER ;

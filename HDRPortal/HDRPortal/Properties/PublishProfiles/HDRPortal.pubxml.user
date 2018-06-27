@@ -1,0 +1,436 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <_PublishTargetUrl>C:\HDRPortal</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="App_Data/activeusers.xsc">
+      <publishTime>07/07/2016 17:23:13</publishTime>
+    </File>
+    <File Include="App_Data/activeusers.xsd">
+      <publishTime>07/07/2016 17:23:11</publishTime>
+    </File>
+    <File Include="App_Data/activeusers.xss">
+      <publishTime>07/07/2016 17:23:13</publishTime>
+    </File>
+    <File Include="bin/AccessControl.dll">
+      <publishTime>06/29/2016 17:14:46</publishTime>
+    </File>
+    <File Include="bin/AESEncrypt.dll">
+      <publishTime>03/19/2014 17:20:19</publishTime>
+    </File>
+    <File Include="bin/Antlr3.Runtime.dll">
+      <publishTime>07/14/2016 10:53:03</publishTime>
+    </File>
+    <File Include="bin/App_Data/activeusers.Designer.cs">
+      <publishTime>09/19/2016 15:06:03</publishTime>
+    </File>
+    <File Include="bin/App_Data/activeusers.xsc">
+      <publishTime>07/07/2016 17:23:13</publishTime>
+    </File>
+    <File Include="bin/App_Data/activeusers.xsd">
+      <publishTime>07/07/2016 17:23:11</publishTime>
+    </File>
+    <File Include="bin/App_Data/activeusers.xss">
+      <publishTime>07/07/2016 17:23:13</publishTime>
+    </File>
+    <File Include="bin/Content/images/ajax-loader.gif">
+      <publishTime>05/24/2016 13:46:41</publishTime>
+    </File>
+    <File Include="bin/Content/images/bacground.jpg">
+      <publishTime>07/13/2016 13:17:49</publishTime>
+    </File>
+    <File Include="bin/Content/images/banner-2.png">
+      <publishTime>05/19/2016 18:48:08</publishTime>
+    </File>
+    <File Include="bin/Content/images/banner.png">
+      <publishTime>11/18/2016 17:57:01</publishTime>
+    </File>
+    <File Include="bin/Content/images/bckground.jpg">
+      <publishTime>05/19/2016 10:00:59</publishTime>
+    </File>
+    <File Include="bin/Content/images/charticon.png">
+      <publishTime>10/10/2016 09:41:38</publishTime>
+    </File>
+    <File Include="bin/Content/images/css3menu1/arrowmain0.gif">
+      <publishTime>08/19/2016 11:07:39</publishTime>
+    </File>
+    <File Include="bin/Content/images/css3menu1/arrowmain1.gif">
+      <publishTime>08/19/2016 11:07:39</publishTime>
+    </File>
+    <File Include="bin/Content/images/css3menu1/arrowsub.png">
+      <publishTime>08/19/2016 11:07:39</publishTime>
+    </File>
+    <File Include="bin/Content/images/css3menu1/hsep.png">
+      <publishTime>08/19/2016 11:07:39</publishTime>
+    </File>
+    <File Include="bin/Content/images/Customer-service.png">
+      <publishTime>04/28/2018 11:47:39</publishTime>
+    </File>
+    <File Include="bin/Content/images/custservice.png">
+      <publishTime>04/25/2018 09:02:38</publishTime>
+    </File>
+    <File Include="bin/Content/images/demography.png">
+      <publishTime>04/28/2018 11:47:42</publishTime>
+    </File>
+    <File Include="bin/Content/images/diamond.png">
+      <publishTime>05/23/2016 08:45:33</publishTime>
+    </File>
+    <File Include="bin/Content/images/loguser.png">
+      <publishTime>07/14/2016 14:25:58</publishTime>
+    </File>
+    <File Include="bin/Content/images/ML-compliance.png">
+      <publishTime>04/28/2018 11:47:42</publishTime>
+    </File>
+    <File Include="bin/Content/images/ML-map.png">
+      <publishTime>04/28/2018 11:47:42</publishTime>
+    </File>
+    <File Include="bin/Content/images/ML-trend.png">
+      <publishTime>04/28/2018 11:47:42</publishTime>
+    </File>
+    <File Include="bin/Content/images/Offline-monitoring.png">
+      <publishTime>04/28/2018 11:47:42</publishTime>
+    </File>
+    <File Include="bin/Content/images/offlineicon.PNG">
+      <publishTime>11/03/2017 08:37:46</publishTime>
+    </File>
+    <File Include="bin/Content/images/switch.png">
+      <publishTime>02/19/2018 11:20:20</publishTime>
+    </File>
+    <File Include="bin/Content/images/user.png">
+      <publishTime>05/21/2016 16:27:19</publishTime>
+    </File>
+    <File Include="bin/Content/Site.css">
+      <publishTime>04/28/2018 11:58:14</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>07/14/2016 10:53:15</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>07/14/2016 10:53:16</publishTime>
+    </File>
+    <File Include="bin/itextsharp.dll">
+      <publishTime>10/18/2009 00:37:02</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Core.dll">
+      <publishTime>07/14/2016 10:53:18</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.EntityFramework.dll">
+      <publishTime>07/14/2016 10:53:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.AspNet.Identity.Owin.dll">
+      <publishTime>07/14/2016 10:53:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.dll">
+      <publishTime>07/14/2016 10:53:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Host.SystemWeb.dll">
+      <publishTime>07/14/2016 10:53:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Cookies.dll">
+      <publishTime>07/14/2016 10:53:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.dll">
+      <publishTime>07/14/2016 10:53:19</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Facebook.dll">
+      <publishTime>07/14/2016 10:53:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Google.dll">
+      <publishTime>07/14/2016 10:53:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.MicrosoftAccount.dll">
+      <publishTime>07/14/2016 10:53:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.OAuth.dll">
+      <publishTime>07/14/2016 10:53:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Owin.Security.Twitter.dll">
+      <publishTime>07/14/2016 10:53:20</publishTime>
+    </File>
+    <File Include="bin/Microsoft.Web.Infrastructure.dll">
+      <publishTime>07/14/2016 10:53:01</publishTime>
+    </File>
+    <File Include="bin/MLAccessControl.dll">
+      <publishTime>05/05/2018 08:30:04</publishTime>
+    </File>
+    <File Include="bin/MySql.Data.dll">
+      <publishTime>03/05/2012 14:19:08</publishTime>
+    </File>
+    <File Include="bin/MySql.Web.dll">
+      <publishTime>10/20/2015 09:35:18</publishTime>
+    </File>
+    <File Include="bin/Newtonsoft.Json.dll">
+      <publishTime>07/14/2016 10:53:02</publishTime>
+    </File>
+    <File Include="bin/Owin.dll">
+      <publishTime>07/14/2016 10:53:19</publishTime>
+    </File>
+    <File Include="bin/Reports/AccessControlReport.cs">
+      <publishTime>09/19/2016 15:06:05</publishTime>
+    </File>
+    <File Include="bin/Reports/AccessControlReport.rpt">
+      <publishTime>06/30/2016 15:30:03</publishTime>
+    </File>
+    <File Include="bin/Reports/BranchAssetReport.cs">
+      <publishTime>09/19/2016 15:06:05</publishTime>
+    </File>
+    <File Include="bin/Reports/BranchAssetReport.rpt">
+      <publishTime>07/06/2016 11:05:53</publishTime>
+    </File>
+    <File Include="bin/Reports/BranchBandwidthReport.cs">
+      <publishTime>09/19/2016 15:06:06</publishTime>
+    </File>
+    <File Include="bin/Reports/BranchBandwidthReport.rpt">
+      <publishTime>07/08/2016 09:09:24</publishTime>
+    </File>
+    <File Include="bin/Reports/BranchIRReport.cs">
+      <publishTime>09/19/2016 15:06:08</publishTime>
+    </File>
+    <File Include="bin/Reports/BranchIRReport.rpt">
+      <publishTime>07/06/2016 10:18:19</publishTime>
+    </File>
+    <File Include="bin/Reports/BranchProfileReport.cs">
+      <publishTime>09/19/2016 15:06:09</publishTime>
+    </File>
+    <File Include="bin/Reports/BranchProfileReport.rpt">
+      <publishTime>07/08/2016 10:10:17</publishTime>
+    </File>
+    <File Include="bin/Reports/BranchWOReport.cs">
+      <publishTime>09/19/2016 15:06:10</publishTime>
+    </File>
+    <File Include="bin/Reports/BranchWOReport.rpt">
+      <publishTime>07/05/2016 18:25:07</publishTime>
+    </File>
+    <File Include="bin/Reports/SoftwareReport.cs">
+      <publishTime>09/19/2016 15:06:10</publishTime>
+    </File>
+    <File Include="bin/Reports/SoftwareReport.rpt">
+      <publishTime>07/01/2016 10:32:33</publishTime>
+    </File>
+    <File Include="bin/Scripts/_references.js">
+      <publishTime>04/28/2018 13:25:24</publishTime>
+    </File>
+    <File Include="bin/System.Web.Helpers.dll">
+      <publishTime>07/14/2016 10:53:01</publishTime>
+    </File>
+    <File Include="bin/System.Web.Mvc.dll">
+      <publishTime>07/14/2016 10:53:01</publishTime>
+    </File>
+    <File Include="bin/System.Web.Optimization.dll">
+      <publishTime>07/14/2016 10:53:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.Razor.dll">
+      <publishTime>07/14/2016 10:53:00</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Deployment.dll">
+      <publishTime>07/14/2016 10:53:01</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.dll">
+      <publishTime>07/14/2016 10:53:01</publishTime>
+    </File>
+    <File Include="bin/System.Web.WebPages.Razor.dll">
+      <publishTime>07/14/2016 10:53:01</publishTime>
+    </File>
+    <File Include="bin/WebGrease.dll">
+      <publishTime>07/14/2016 10:53:03</publishTime>
+    </File>
+    <File Include="Content/bootstrap.css">
+      <publishTime>06/30/2016 09:25:08</publishTime>
+    </File>
+    <File Include="Content/bootstrap.min.css">
+      <publishTime>05/18/2016 18:08:29</publishTime>
+    </File>
+    <File Include="Content/images/ajax-loader.gif">
+      <publishTime>05/24/2016 13:46:41</publishTime>
+    </File>
+    <File Include="Content/images/bacground.jpg">
+      <publishTime>07/13/2016 13:17:49</publishTime>
+    </File>
+    <File Include="Content/images/banner-2.png">
+      <publishTime>05/19/2016 18:48:08</publishTime>
+    </File>
+    <File Include="Content/images/banner.png">
+      <publishTime>11/18/2016 17:57:01</publishTime>
+    </File>
+    <File Include="Content/images/bckground.jpg">
+      <publishTime>05/19/2016 10:00:59</publishTime>
+    </File>
+    <File Include="Content/images/charticon.png">
+      <publishTime>10/10/2016 09:41:38</publishTime>
+    </File>
+    <File Include="Content/images/css3menu1/arrowmain0.gif">
+      <publishTime>08/19/2016 11:07:39</publishTime>
+    </File>
+    <File Include="Content/images/css3menu1/arrowmain1.gif">
+      <publishTime>08/19/2016 11:07:39</publishTime>
+    </File>
+    <File Include="Content/images/css3menu1/arrowsub.png">
+      <publishTime>08/19/2016 11:07:39</publishTime>
+    </File>
+    <File Include="Content/images/css3menu1/hsep.png">
+      <publishTime>08/19/2016 11:07:39</publishTime>
+    </File>
+    <File Include="Content/images/Customer-service.png">
+      <publishTime>04/28/2018 11:47:39</publishTime>
+    </File>
+    <File Include="Content/images/custservice.png">
+      <publishTime>04/25/2018 09:02:38</publishTime>
+    </File>
+    <File Include="Content/images/demography.png">
+      <publishTime>04/28/2018 11:47:42</publishTime>
+    </File>
+    <File Include="Content/images/diamond.png">
+      <publishTime>05/23/2016 08:45:33</publishTime>
+    </File>
+    <File Include="Content/images/loguser.png">
+      <publishTime>07/14/2016 14:25:58</publishTime>
+    </File>
+    <File Include="Content/images/ML-compliance.png">
+      <publishTime>04/28/2018 11:47:42</publishTime>
+    </File>
+    <File Include="Content/images/ML-map.png">
+      <publishTime>04/28/2018 11:47:42</publishTime>
+    </File>
+    <File Include="Content/images/ML-trend.png">
+      <publishTime>04/28/2018 11:47:42</publishTime>
+    </File>
+    <File Include="Content/images/Offline-monitoring.png">
+      <publishTime>04/28/2018 11:47:42</publishTime>
+    </File>
+    <File Include="Content/images/offlineicon.PNG">
+      <publishTime>11/03/2017 08:37:46</publishTime>
+    </File>
+    <File Include="Content/images/switch.png">
+      <publishTime>02/19/2018 11:20:20</publishTime>
+    </File>
+    <File Include="Content/images/user.png">
+      <publishTime>05/21/2016 16:27:19</publishTime>
+    </File>
+    <File Include="Content/Site.css">
+      <publishTime>04/28/2018 11:58:14</publishTime>
+    </File>
+    <File Include="favicon.ico">
+      <publishTime>05/18/2016 18:05:16</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.eot">
+      <publishTime>05/18/2016 18:08:29</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.svg">
+      <publishTime>05/18/2016 18:08:29</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.ttf">
+      <publishTime>05/18/2016 18:08:29</publishTime>
+    </File>
+    <File Include="fonts/glyphicons-halflings-regular.woff">
+      <publishTime>05/18/2016 18:08:28</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>07/14/2016 10:04:40</publishTime>
+    </File>
+    <File Include="mlicon.ico">
+      <publishTime>05/24/2016 13:58:11</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>09/19/2016 15:06:03</publishTime>
+    </File>
+    <File Include="Reports/AccessControlReport.rpt">
+      <publishTime>06/30/2016 15:30:03</publishTime>
+    </File>
+    <File Include="Reports/BranchAssetReport.rpt">
+      <publishTime>07/06/2016 11:05:53</publishTime>
+    </File>
+    <File Include="Reports/BranchBandwidthReport.rpt">
+      <publishTime>07/08/2016 09:09:24</publishTime>
+    </File>
+    <File Include="Reports/BranchIRReport.rpt">
+      <publishTime>07/06/2016 10:18:19</publishTime>
+    </File>
+    <File Include="Reports/BranchProfileReport.rpt">
+      <publishTime>07/08/2016 10:10:17</publishTime>
+    </File>
+    <File Include="Reports/BranchWOReport.rpt">
+      <publishTime>07/05/2016 18:25:07</publishTime>
+    </File>
+    <File Include="Reports/SoftwareReport.rpt">
+      <publishTime>07/01/2016 10:32:33</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.js">
+      <publishTime>05/18/2016 18:08:28</publishTime>
+    </File>
+    <File Include="Scripts/bootstrap.min.js">
+      <publishTime>05/18/2016 18:08:27</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.js">
+      <publishTime>05/18/2016 18:08:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.js">
+      <publishTime>05/18/2016 18:08:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery-1.10.2.min.map">
+      <publishTime>05/18/2016 18:08:31</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.js">
+      <publishTime>05/18/2016 18:10:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.min.js">
+      <publishTime>05/18/2016 18:10:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.js">
+      <publishTime>05/18/2016 18:10:16</publishTime>
+    </File>
+    <File Include="Scripts/jquery.validate.unobtrusive.min.js">
+      <publishTime>05/18/2016 18:10:16</publishTime>
+    </File>
+    <File Include="Scripts/modernizr-2.6.2.js">
+      <publishTime>05/18/2016 18:09:16</publishTime>
+    </File>
+    <File Include="Scripts/respond.js">
+      <publishTime>05/18/2016 18:09:18</publishTime>
+    </File>
+    <File Include="Scripts/respond.min.js">
+      <publishTime>05/18/2016 18:09:18</publishTime>
+    </File>
+    <File Include="Scripts/_references.js">
+      <publishTime>04/28/2018 13:25:24</publishTime>
+    </File>
+    <File Include="Views/Home/Index.cshtml">
+      <publishTime>04/28/2018 11:56:55</publishTime>
+    </File>
+    <File Include="Views/LogIn/Index.cshtml">
+      <publishTime>09/15/2017 11:01:34</publishTime>
+    </File>
+    <File Include="Views/Shared/Error.cshtml">
+      <publishTime>05/18/2016 18:09:26</publishTime>
+    </File>
+    <File Include="Views/Shared/GraphPop.cshtml">
+      <publishTime>01/20/2017 13:45:20</publishTime>
+    </File>
+    <File Include="Views/Shared/PartialPop.cshtml">
+      <publishTime>02/19/2018 11:10:23</publishTime>
+    </File>
+    <File Include="Views/Shared/Partialpop2.cshtml">
+      <publishTime>02/19/2018 10:39:52</publishTime>
+    </File>
+    <File Include="Views/Shared/_Layout.cshtml">
+      <publishTime>09/13/2016 13:02:28</publishTime>
+    </File>
+    <File Include="Views/Shared/_LoginPartial.cshtml">
+      <publishTime>05/18/2016 18:09:27</publishTime>
+    </File>
+    <File Include="Views/Web.config">
+      <publishTime>07/14/2016 10:10:16</publishTime>
+    </File>
+    <File Include="Views/_ViewStart.cshtml">
+      <publishTime>05/18/2016 18:05:16</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>04/25/2018 09:12:18</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,36 @@
+﻿@model HDRPortal.Models.UserModel
+
+@{
+    ViewBag.Title = "Login";
+}
+@*disable back button*@
+<script>
+    $(document).ready(function () {
+        function disableBack() { window.history.forward() }
+        window.onload = disableBack();
+        window.onpageshow = function (evt) { if (evt.persisted) disableBack() }
+    });
+</script>
+<div class="row">
+    <div><img style="margin-top:-30px;margin-left:20px;height:100px;width:500px; " src=@Url.Content("~/Content/images/banner.png")  / ></div>
+
+    <center>
+        <div id="login">
+            <img class="diam" src=@Url.Content("~/Content/images/loguser.png") />
+            @using (Html.BeginForm("Index", "Login", FormMethod.Post))
+            {
+
+                <div class="user"><i class="glyphicon glyphicon-user"></i><input id="user" onchange="checkuser()" type="text" class="usertx" name="username" style=" text-transform:uppercase;" placeholder="Username" /></div>
+                <div class="pass"><i class="glyphicon glyphicon-lock"></i><input id="pass" onchange="checkuser()" type="password" class="usertx" name="userpass" placeholder="Password" /></div>
+                <center><font color="#380101"><label id="error">@Model.message</label></font></center>
+                <input type="submit" name="Command" value="Login" style="font-weight: bold;" id="btnlogin" />
+
+
+            }
+         <p>&copy; @DateTime.Now.Year  M.Lhuiller Philippines Inc.</p>
+        </div>
+
+     
+
+    </center>
+</div>

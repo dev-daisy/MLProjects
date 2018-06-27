@@ -1,0 +1,29 @@
+﻿
+
+<div id="pop2" class="parentDisableGraph" style="text-align:center;">
+    <div class="modal"><img class="imgLoad" src="@Url.Content("~/Content/images/ajax-loader.gif")" /></div>
+    <div class="popupgraph">
+        <a href="#" id="closepop" style="float:right;"><span style="color:black">Close &nbsp; </span></a>
+        <br>
+        <center>  <div class="BannerGraph">G R A P H</div></center>
+        <div> <hr style="height: 2px; background: black; border-color: black; " /></div>
+        <br />
+        <center>
+            <div id="reportdata" style=" max-width: 95%; position: relative; height: 370px; color: black; ">
+            </div>
+        </center>
+        <center>
+            <table style="color:black;">
+                <tr>
+                    <td colspan="2" style="height: 50px;">
+                        <input class="btn-danger" type="submit" name="Command" value="Create PDF File" style="width: 124px; height:30px; font-weight: bold;" id="getdata" />
+                    </td>
+                </tr>
+                <tr style="visibility:hidden;">
+                    <td> <a id="export" href=@Url.Action("Export", "Graph")> <span><label>Export</label></span> </a> </td>
+                </tr>
+            </table>
+        </center>
+    </div>
+</div>
+

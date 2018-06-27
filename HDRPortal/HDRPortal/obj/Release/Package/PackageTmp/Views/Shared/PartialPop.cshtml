@@ -1,0 +1,12 @@
+﻿<div class="lmodal"><img class="imgLoad" src="@Url.Content("~/Content/images/ajax-loader.gif")" /></div>
+
+    <div id="pop1" class="parentDisable">
+    <div id="mySidenav" class="sidenav">
+        <a href="javascript:void(0)" class="closebtn" style="color:white;" onclick="hide('pop1')">&times;</a>
+        <p style="color: white; font-size: 15px; margin-left:20px"><i class="glyphicon glyphicon-user"></i>&nbsp; @HttpContext.Current.Session["fname"].ToString()</p>
+        <p style="color: white; font-size: 13px; margin-left: 50px;"><i class="glyphicon glyphicon-tag"></i>&nbsp;@HttpContext.Current.Session["userrole"].ToString()</p>
+        @*<a id="sidenavtag" href="#" onclick="pop('pop1')"><i class="glyphicon glyphicon-file"></i>&nbsp; Generate Reports</a>
+            <a id="sidenavtag" href="#" onclick="pop('pop1')"><i class="glyphicon glyphicon-file"></i>&nbsp; Generate Reports</a>*@
+        <a id="sidenavtag" href=@Url.Action("../Login/Index")><i class="glyphicon glyphicon-log-out" style="margin-left:55px"></i>&nbsp; Log-out</a>
+    </div>
+</div>

@@ -1,0 +1,95 @@
+﻿@model  HDRPortal.Models.AcessControlModel
+@{
+    ViewBag.Title = "ML Access Control-Home";
+    int yeardiff = (DateTime.Today.Year + 1) - 2013;
+}
+<script src="~/Scripts/canvasjs.min.js"></script>
+
+<div id="header">
+    <img class="banner"src=@Url.Content("~/Content/images/banner.png") />
+   </div>
+
+@*<script>
+        function pop(div) {
+        //closeNav();
+        document.getElementById(div).style.display = 'block';
+
+    }
+    function hide(div) {
+        document.getElementById(div).style.display = 'none';
+    }
+</script>*@
+<div class="menu" onclick="pop('pop1')">
+    <center>
+        <div class="m1"></div>
+        <div class="m2"></div>
+        <div class="m3"></div>
+    </center>
+</div>
+
+<div class="mapmenu">
+    <a id="customerservice" data-toggle="tooltip" title="Go to Customer Service" data-placement="bottom" style="font-size: 18px;color: white;text-decoration: none;" href="">
+        <span style="color: #410101;"><img style="width:28px" src=@Url.Content("~/Content/images/Customer-service.png") /></span>
+        Customer Service
+    </a>
+    <a id="mltrend" data-toggle="tooltip" title="Go to M.Lhuillier Trend" data-placement="bottom" style="font-size: 18px; color: white; text-decoration: none;" href="">
+        <span style="color: #410101;"><img style="width: 28px; " src=@Url.Content("~/Content/images/ML-trend.png") /></span>
+        MLTrend
+    </a>
+    <a id="mlcustomerstat" data-toggle="tooltip" title="Go to Demography" data-placement="bottom" style="font-size: 18px; color: white; text-decoration: none;" href="">
+        <span style="color: #410101;"><img style="width: 28px; " src=@Url.Content("~/Content/images/demography.png") /></span>
+        Demography
+    </a>
+    <a id="offlinemap" data-toggle="tooltip" title="Go to Offline Monitoring" data-placement="bottom" style="font-size: 18px; color: white; text-decoration: none;" href="">
+        <span style="color: #410101;"><img style="width: 28px; height: 22px; " src=@Url.Content("~/Content/images/Offline-monitoring.png") /></span>
+        Offline Monitoring
+    </a>
+    <a id="mlComp" onclick="status()" data-toggle="modal" title="Go to ML Compliance" data-target="#CompModal" data-placement="bottom" style="font-size: 18px; color: white; text-decoration: none;" href="">
+        <span style="color: #410101;"><img style="width: 28px; " src=@Url.Content("~/Content/images/ML-compliance.png") /></span>
+        ML Compliance
+    </a>
+    <a id="mlmap" data-toggle="tooltip" title="Go to M.Lhuillier Map" data-placement="bottom" style="font-size: 18px; color: white; text-decoration: none;" href="">
+        @*<span style="color: #410101;" class="glyphicon glyphicon-map-marker "></span>*@
+        <span style="color: #410101;"><img style="width:28px" src=@Url.Content("~/Content/images/ML-map.png") /></span>
+        MLMap
+    </a>
+ </div>
+
+@Html.Partial("PartialPop")
+@Html.Partial("GraphPop")
+@Html.Partial("Partialpop2")
+
+@*<div id="pop1" class="parentDisable">*@
+<center>
+    <div id="body" >
+        @* <a href="#" onclick="hide('pop1')" style="color: #0C0000; position: absolute; right: 3px; font-size: 20px; "><i class="glyphicon glyphicon-remove"></i> </a>*@
+        @if (HttpContext.Current.Session["userrole"].ToString() == "GM")
+        {
+        <p class="Rgtxt">Branch Statistics V1.0</p>
+        }
+        else{
+        <p class="Rgtxt">Help Desk Report Portal V4.0</p>
+        }
+        <hr />
+
+        @Html.DropDownListFor(m => m.Category, (IEnumerable<SelectListItem>)Model.Category, new { @id = "dCategory", @class = "dropdown" })
+        @Html.DropDownListFor(m => m.Region, (IEnumerable<SelectListItem>)Model.Region, new { @id = "dRegion", @class = "dropdown" })
+        @Html.DropDownListFor(m => m.Area, (IEnumerable<SelectListItem>)Model.Area, new { @id = "dArea", @class = "dropdown" })
+        @Html.DropDownListFor(m => m.Branch, (IEnumerable<SelectListItem>)Model.Branch, new { @id = "dBranch", @class = "dropdown" })
+        @Html.DropDownList("year", Enumerable.Range(2013, yeardiff).Select(i => new SelectListItem { Value = i.ToString(), Text = i.ToString(), Selected = (i == DateTime.Now.Year) }), new { @id = "year", @class = "dropdown"})
+
+
+        <input type="submit" id="generate" value="Generate" />
+
+        <div style="visibility:hidden;"><a id="myReport" href=@Url.Action("/loadReport")> <span><label>TO BE CLICKED</label></span> </a> </div>
+        <div style="visibility:hidden;"><a id="user" href="#"><span><label>@Model.user</label></span></a></div>
+        <div style="visibility:hidden;"><a id="role" href="#"><span><label>@Model.role</label></span></a></div>
+        <div style="visibility:hidden;"><a id="mappath" href="#"><span><label>@Model.mappath</label></span></a></div>
+        <div style="visibility:hidden;"><a id="trendpath" href="#"><span><label>@Model.trendpath</label></span></a></div>
+        <div style="visibility:hidden;"><a id="customerpath" href="#"><span><label>@Model.customerstatpath</label></span></a></div>
+        <div style="visibility:hidden;"><a id="offlinemonitoringpath" href="#"><span><label>@Model.offlinemonitoringpath</label></span></a></div>
+        <div style="visibility:hidden;"><a id="customerservicepath" href="#"><span><label>@Model.customerservicepath </label></span></a></div>
+    </div>
+</center>
+    @*</div>*@
+    <div class="footer"><p>&copy; @DateTime.Now.Year  M.Lhuiller Philippines Inc.</p> </div>

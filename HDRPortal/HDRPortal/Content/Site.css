@@ -1,0 +1,519 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background-image:url('../Content/images/bacground.jpg');
+      /*responsive BG*/
+        background-position: center center;
+      background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+}
+
+.mapmenu {
+ position: absolute;
+    top: 106px;
+    right: 55px;
+    width: 100%;
+    /*background-color: #4a4a48;*/
+    width: auto;
+    border-radius: 5px 0px 0px 5px;
+}
+   
+  
+
+
+.parentDisable
+{
+	z-index:999;
+	width:100%;
+	height:100%;
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color: rgba(255, 255, 255, 0);
+	color: #aaa;
+	opacity: .90;
+	filter: alpha(opacity=80);
+}
+#popup {
+			-moz-border-radius:10px; -webkit-border-radius:10px; margin:10px auto;
+/*-moz-box-shadow: white 3px 3px 30px;
+-webkit-box-shadow:white 3px 3px 30px;*/
+	width: 550px;
+	height: 370px;
+	/*position: absolute;*/
+    position: relative;
+	color: rgb(249, 8, 8);
+	background-color:rgb(255, 255, 255);
+	/* To align popup window at the center of screen*/
+				top: 25%;
+	/*left: 50%;*/
+	/*margin-top: -150px;*/
+	/*margin-left: -270px;*/
+    margin:auto;
+     /*-webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s*/
+      -webkit-animation: fadein 2s; /* Safari, Chrome and Opera > 12.1 */
+       -moz-animation: fadein 2s; /* Firefox < 16 */
+        -ms-animation: fadein 2s; /* Internet Explorer */
+			}
+
+/* Firefox < 16 */
+@-moz-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Safari, Chrome and Opera > 12.1 */
+@-webkit-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* Internet Explorer */
+@-ms-keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+
+#header {
+background-color: rgba(27, 1, 1, 0.64);
+    height: 144px;
+    width:100%;
+    position: absolute;
+    top: 0%;
+}
+
+#login {
+               /*-webkit-border-radius: 5px;*/
+       /*box-shadow: 0px 0px 10px black;*/   
+    /*background-color: rgba(0, 0, 0, 0.35);*/
+    /*border:1px;
+        border-bottom-style: inset;
+    border-top-style: inset;*/
+    height: 300px;
+    width: 100%;
+    color:white;
+    position:absolute;
+    top :180px;
+
+}
+#btnlogin {
+ border: none;
+    background-image: linear-gradient(to bottom, #8A0202, #380101);
+    width: 296px;
+    height: 32px;
+    color: white;
+    margin-top: 37px;
+    margin-left: 26px;
+    margin-bottom: 40px;
+    -webkit-border-radius: 3px;
+
+}
+    #btnlogin:hover {
+    background-image: linear-gradient(to bottom, #380101, #8A0202);
+    }
+
+.usertx {
+ border: solid 1px;
+    border-color: white;
+   background-color:rgba(12, 0, 0, 0.51);
+    width: 296px;
+    height: 32px;
+    color: #380101;
+    margin-top: 15px;
+    margin-left: 4px;
+    -webkit-border-radius: 3px;
+    text-align:center;
+
+}
+    .usertx:focus {
+    
+    background-color:white;
+    }
+    .usertx:hover {
+    background-color:white;
+    }
+
+.user, .pass {
+margin-left:10px;
+}
+
+
+.diam {
+
+         margin-bottom: 1px;
+    margin-left: 25px;
+    margin-top: 15px;
+    height: 60px;
+    width: 80px;
+}
+.banner {
+      /* margin-bottom: 1px; */
+    /* margin-left: 159px; */
+    /* margin-top: 10px; */
+    position: absolute;
+    top: 15px;
+    /* left: 155px; */
+    width: 535px;
+    height: 100px;
+}
+
+#body{
+     /*margin:10px auto;*/
+        -webkit-border-radius: 5px;
+    background-color:rgba(0, 0, 0, 0.35);
+    height: 300px;
+    width: 500px;
+       margin: 140px;
+    padding: 5px;
+      -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+@-webkit-keyframes animatetop {
+    from {top:-100%; opacity:0} 
+    to {top:30%; opacity:1}
+}
+
+@keyframes animatetop {
+    from {top:-100%; opacity:0}
+    to {top:30%; opacity:1}
+}
+
+.Rgtxt {
+        margin: 9px 18px -10px;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+}
+
+.dropdown {
+  background: none;
+    border: solid 1px;
+    border-color: white;
+    color: rgb(255, 255, 255);
+      margin-bottom:11px;
+    margin-left: 0px;
+    -webkit-border-radius: 3px;
+    width: 302px;
+    height: 32px;
+
+}
+    .dropdown:hover {
+    background-color:rgba(27, 1, 1, 0.64);
+    }
+#generate {
+    border: none;
+    /* border-color: white; */
+    /* background-color: #B53431; */
+    /* background-image: -webkit-linear-gradient(top, #fc2f2f, #690c0c); */
+    /*background-image: -moz-linear-gradient(top, #fc2f2f, #690c0c);
+    background-image: -ms-linear-gradient(top, #fc2f2f, #690c0c);
+    background-image: -o-linear-gradient(top, #fc2f2f, #690c0c);*/
+    background-image: linear-gradient(to bottom, #8A0202, #380101);
+    border-radius: 5px;
+    width: 220px;
+    height: 30px;
+    margin-top: 3px;
+    margin-left: 0px;
+    color: white;
+}
+    #generate:hover {
+    
+     background-image: linear-gradient(to bottom, #380101, #8A0202);
+    }
+
+    .footer {
+    /*-ms-transform: rotate(45deg); /* IE 9 */
+    /*-webkit-transform: rotate(45deg);*/ /* Chrome, Safari, Opera */
+    /*transform: rotate(45deg);*/
+   position:absolute; 
+bottom:1px;
+   width: 100%;
+    background-color:  rgba(27, 1, 1, 0.64);
+     color: rgb(255, 255, 255);
+    font-size: 15px;
+
+}
+
+    .m1,.m2,.m3 {
+
+ width: 35px;
+    height: 5px;
+    background-color: rgb(255, 255, 255);
+    margin: 6px 0;
+    align-self:center;
+     -webkit-border-radius:5px;
+}
+
+.menu {
+width:45px;
+position:absolute;
+top:35px;
+right:50px;
+
+color:white;
+
+}
+.menu:hover {
+  
+    box-shadow: 0px 0px 10px black; 
+     -moz-border-radius:5px; -webkit-border-radius:5px; margin:5px auto;
+    }
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    /*max-width: 280px;*/
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+/*=======================================================side navigation================================================================*/
+
+/* The side navigation menu */
+.sidenav {
+    -webkit-border-radius: 5px;
+     height: 209px;
+    width: 269px;
+    position: absolute;
+    /* z-index: 1; */
+    top: 120px;
+    right: 40px;
+    background-color:rgb(95,95,95);
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.2s;
+    box-shadow: 3px 1px 5px rgba(14, 14, 14, 0.42);
+    -webkit-animation: fadein 1s;
+    -moz-animation: fadein 1s;
+    -ms-animation: fadein 1s;
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 3px 0px 5px 22px;
+    text-decoration: none;
+    font-size: 24px;
+    color: rgb(77, 1, 1);
+    display: block;
+    transition: 0.2s;
+    font-family: fantasy;
+}
+
+
+
+/* Position and style the close button (top right corner) */
+.closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 20px !important;
+    margin-left: 50px;
+   
+}
+/* When you mouse over the navigation links, change their color */
+.closebtn:hover{
+    color: #380101;
+}
+#sidenavtag {
+     border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+   #sidenavtag:hover{
+        background-color: rgba(80, 4, 4, 0.36);
+    }
+
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main {
+    transition: margin-left .2s;
+    padding: 0px;
+}
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+/*====================================================================================Loading===============================================*/
+.lmodal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background:rgba(115, 110, 110, 0.38);
+               
+}
+.imgLoad {
+position:absolute;
+top:16%;
+left:50%;
+}
+body.loading {
+    overflow: hidden;   
+}
+body.loading .modal {
+    display: block;
+}
+
+
+.parentDisableGraph
+{
+	z-index:999;
+	width:100%;
+	height:100%;
+	display:none;
+	position:absolute;
+	top:0;
+	left:0;
+	background-color: rgba(25, 25, 25,0.5);
+	color: #aaa;
+	opacity: .90;
+	filter: alpha(opacity=90);
+}
+.popupgraph {
+			-moz-border-radius:10px; -webkit-border-radius:10px;
+/*-moz-box-shadow: white 3px 3px 30px;
+-webkit-box-shadow:white 3px 3px 30px;*/
+	width: 1100px;
+	height: 560px;
+	/*position: absolute;*/
+    position: relative;
+	/*color: rgba(248,248,248,1);*/
+	/*background-color:rgba(660000, 0, 0,0.9);*/
+	background-color:azure;
+	/* To align popup window at the center of screen*/
+				top: 90px;
+	left: 0%;
+	/*margin-top: -150px;*/
+	/*margin-left: -270px;*/
+    margin:auto;
+     -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+			}
+.BannerGraph {
+    font-size:20px;
+    max-width:900px; text-align: center;
+    width: 100%;
+    position: relative;
+    padding: 0; margin: 0px;
+    /*Animation Corner*/
+    background-color:#F00 ;            
+    background:-webkit-gradient(linear, left top, right top, from(#660000), to(#660000), color-stop(0.7, #fff));     
+    background: linear-gradient(left top, black, white 70%, black);
+    background: -moz-linear-gradient(left top, black, white 70%, black);
+    background-repeat:no-repeat;
+    -webkit-background-size: 100px;    
+    -moz-background-size: 100px;
+    /*color: rgb(0, 0, 0);*/
+    color:black;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-animation-name: shining;
+    -moz-animation-name: shining;    
+    -webkit-animation-duration: 5s;
+    -moz-animation-duration: 5s;    
+    -webkit-animation-iteration-count: infinite;
+    -moz-animation-iteration-count: infinite;  
+    font-weight:bolder;  
+    /*End of animation code*/    
+}
+/*====================================================================================toggle switch===============================================*/
+
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 60px;
+  height: 34px;
+}
+
+.switch input {display:none;}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #020202;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 26px;
+  width: 26px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #ce062b;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
